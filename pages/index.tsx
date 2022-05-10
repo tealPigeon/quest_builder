@@ -1,27 +1,22 @@
 import type { NextPage } from 'next'
-import React, {SyntheticEvent} from 'react'
-import Accordion from "./accordion/accordion";
-// import dynamic from "next/dynamic";
-import BackgroundIcon from '../public/background-icon.svg';
-import ObjectIcon from '../public/objects-icon.svg';
-import LayerIcon from '../public/layers-icon.svg'
-import HandIcon from '../public/hand.svg'
-import HandIconActive from '../public/hand-active.svg';
-import CoursorIcon from '../public/coursor-icon.svg'
-import CancelIcon from '../public/cancel.svg'
-import RecoverIcon from '../public/recover.svg'
-import LayersUp from '../public/layers_up.svg'
-import LayersDown from '../public/layers_down.svg'
-import ReflectionH from '../public/reflection_H.svg'
-import ReflectionY from '../public/reflection_V.svg'
+import React from 'react'
+import Accordion from "./components/accordion/accordion";
+import dynamic from "next/dynamic";
+import { Stage} from "@inlet/react-pixi";
+import Increment from "./componentsForStore/increment"
+import { useDispatch, useSelector } from "react-redux";
+import {incrementByAmount, incrementByAmountHeight, incrementByAmountAngle, incrementByAmountX, incrementByAmountY} from "./store/reducers";
 
-// const PixiApp = dynamic(() => import("./components/PixiApp"), { ssr: false });
-
+const PixiApp = dynamic(() => import("./components/PixiApp"), { ssr: true });
 
 const Home: NextPage = () => {
+
+    const { width } = useSelector((state) => state.counter);
     const [background, setBackground] = React.useState('null');
     const [characteristicsIsOpen,setCharacteristicsIsOpen] = React.useState(true);
     const [isHidden,setHidden] = React.useState(false);
+    const [mode, setMode] = React.useState(false);
+    const [isBackgroundSelected, setIsBackgroundSelected] = React.useState(false);
     const [leftSidePanelState, setLeftSidePanelState] = React.useState('background'); //background, objects, layers
     const [eventCount, setEventCount]=React.useState(0);
     const options = [
@@ -51,7 +46,6 @@ const Home: NextPage = () => {
             key:5,
         },
     ];
-
     const [action, setAction] = React.useState('')
     const listAccordion  = [
         {
@@ -117,32 +111,66 @@ const Home: NextPage = () => {
                 "Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium. Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.",
         },
     ];
+
     function handleSelectChange(event: React.ChangeEvent<HTMLInputElement>) {
         console.log(event)
         setAction(event.target.value);
     }
+    const dispatch = useDispatch();
+    // const { width } = useSelector((state) => state.counter);
+    // const [inputValue, setInputValue] = React.useState(0);
+
+    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
+        // setInputValue(event.target.value);
+        dispatch(incrementByAmount(Number(event.target.value)));
+    }
+
+    function handleInputChangeHeight(event: React.ChangeEvent<HTMLInputElement>) {
+        // setInputValue(event.target.value);
+        dispatch(incrementByAmountHeight(Number(event.target.value)));
+    }
+
+    function handleInputChangeAngle(event: React.ChangeEvent<HTMLInputElement>) {
+        // setInputValue(event.target.value);
+        dispatch(incrementByAmountAngle(Number(event.target.value)));
+    }
+
+    function handleInputChangeX(event: React.ChangeEvent<HTMLInputElement>) {
+        // setInputValue(event.target.value);
+        dispatch(incrementByAmountX(Number(event.target.value)));
+    }
+
+    function handleInputChangeY(event: React.ChangeEvent<HTMLInputElement>) {
+        // setInputValue(event.target.value);
+        dispatch(incrementByAmountY(Number(event.target.value)));
+    }
     console.log(leftSidePanelState);
     return (
         <div className="App">
-            <header className="App-header">
-                <div className="App-header-button">
-                    <CoursorIcon className="App-header-button-image active-button"/>
+            {/*<Increment/>*/}
+            {/*<h1>{width}</h1>*/}
+            <header className="header">
+                <div className="header-button">
+                    <div id="cursor-icon-active" className="header-button-image" />
+                    {/*<img className="header-button-image active-button" src={'cursor-icon.svg'} width={24} height={24} alt="" />*/}
                 </div>
-                <div className="App-header-button">
-                    <HandIcon className="App-header-button-inactive"/>
-                    {/*<HandIconActive/>*/}
+                <div className="header-button">
+                    <div id="hand-icon" className="header-button-image" />
+                    {/*<img className="header-button-image" src={'hand.svg'} width={24} height={24} alt="" />*/}
                 </div>
-                <div className="App-header-button">
-                    <CancelIcon className="App-header-button-inactive "/>
+                <div className="header-button">
+                    <div id="cancel-icon" className="header-button-image" />
+                    {/*<img className="header-button-image" src={'cancel.svg'} width={24} height={24} alt="" />*/}
                 </div>
-                <div className="App-header-button">
-                    <RecoverIcon className="App-header-button-inactive"/>
+                <div className="header-button">
+                    <div id="recover-icon" className="header-button-image" />
+                    {/*<img className="header-button-image" src={'recover.svg'} width={24} height={24} alt="" />*/}
                 </div>
-                <div className='App-header-title'>КВЕСТРУКТОР</div>
-                <button className='App-header-button-preview'>
-                    <img className="App-header-button-preview-image" src={'preview_icon.svg'} width={20} height={16} alt="" />
+                <div className='header-title'>КВЕСТРУКТОР</div>
+                <button className='header-button-preview'>
+                    <img className="header-button-preview-image" src={'preview_icon.svg'} width={20} height={16} alt="" />
                     предпросмотр</button>
-                <button className='App-header-button-next'>ДАЛЕЕ</button>
+                <button className='header-button-next'>ДАЛЕЕ</button>
             </header>
             <div className='box'>
                 <div className='side-panel'>
@@ -150,39 +178,48 @@ const Home: NextPage = () => {
                         {
                             leftSidePanelState === 'background' ?
                                 (<div className='side-panel-container-block active' onClick={()=>setLeftSidePanelState('background')}>
-                                    <BackgroundIcon className="left-side-panel-icon selected-icon" />
+                                    {/*<img id="left-side-panel-background-icon" className="left-side-panel-icon selected-icon" src={'background-icon.svg'} width={20} height={16} alt="" />*/}
+                                    <div id="left-side-panel-background-icon-active" className="left-side-panel-icon selected-icon"/>
                                     <div>фон</div>
                                 </div>):
                                 (<div className='side-panel-container-block' onClick={()=>setLeftSidePanelState('background')}>
-                                    <BackgroundIcon className="left-side-panel-icon"  />
+                                    <div id="left-side-panel-background-icon" className="left-side-panel-icon selected-icon"/>
+                                    {/*<img className="left-side-panel-icon" src={'background-icon.svg'} width={20} height={16} alt="" />*/}
                                     <div>фон</div>
                                 </div>)
                         }
                         {
                             leftSidePanelState === 'objects' ?
-                                (                        <div className='side-panel-container-block active' onClick={()=>setLeftSidePanelState('objects')}>
-                                    <ObjectIcon className="left-side-panel-icon selected-icon" />
+                                ( <div className='side-panel-container-block active' onClick={()=>setLeftSidePanelState('objects')}>
+                                    {/*<img className="left-side-panel-icon selected-icon" src={'objects-icon.svg'} width={20} height={16} alt="" />*/}
+                                    <div id="left-side-panel-objects-icon-active" className="left-side-panel-icon selected-icon"/>
                                     <div>объекты</div>
                                 </div>):
                                 (                        <div className='side-panel-container-block' onClick={()=>setLeftSidePanelState('objects')}>
-                                    <ObjectIcon className="left-side-panel-icon" />
+                                    <div id="left-side-panel-objects-icon" className="left-side-panel-icon"/>
+                                    {/*<img className="left-side-panel-icon" src={'objects-icon.svg'} width={20} height={16} alt="" />*/}
                                     <div>объекты</div>
                                 </div>)
                         }
                         {
                             leftSidePanelState === 'layers' ?
                                 (                        <div className='side-panel-container-block active' onClick={()=>setLeftSidePanelState('layers')}>
-                                    <LayerIcon className="left-side-panel-icon selected-icon" />
+                                    {/*<img className="left-side-panel-icon selected-icon" src={'layers-icon.svg'} width={20} height={16} alt="" />*/}
+                                    <div id="left-side-panel-layers-icon-active" className="left-side-panel-icon"/>
+
                                     <div>слои</div>
                                 </div>):
                                 (                        <div className='side-panel-container-block' onClick={()=>setLeftSidePanelState('layers')}>
-                                    <LayerIcon className="left-side-panel-icon"/>
+                                    {/*<img className="left-side-panel-icon" src={'layers-icon.svg'} width={20} height={16} alt="" />*/}
+                                    <div id="left-side-panel-layers-icon" className="left-side-panel-icon"/>
+
                                     <div>слои</div>
                                 </div>)
                         }
                     </div>
                     <div className='side-panel-scroll'>
                         {
+                            
                             leftSidePanelState === 'background' ? (<div className='side-panel-container-backgrounds'>
                                 <div className='background background-1'  onClick={() => setBackground("background1")}></div>
                                 <div className='background background-2'  onClick={() => setBackground("background2")}></div>
@@ -198,9 +235,10 @@ const Home: NextPage = () => {
                     </div>
                 </div>
                 <div className='main-content'>
-                    {
+                <PixiApp width={width}/>
+                    {/* {
                         background === 'null' ? <div className='main-text'>Выберите фон, который хотите использовать</div> : <div className={background}></div>
-                    }
+                    } */}
                 </div>
                 <div className='right-side-panel'>
                     <div className='title'>Объект</div>
@@ -218,18 +256,17 @@ const Home: NextPage = () => {
                                         <div className='settings'>
                                             <label>
                                                 В
-                                                <input type={"text"} id="height"/>
+                                                <input type={"text"} id="height" onChange={handleInputChangeHeight}/>
                                             </label>
                                             <label>
                                                 Ш
-                                                <input type={"text"} id="width"/>
+                                                <input type={"text"} id="width"  onChange={handleInputChange}/>
                                             </label>
                                             <label>
                                                 У
-                                                <input type={"text"} id="angle"/>
+                                                <input type={"text"} id="angle" onChange={handleInputChangeAngle}/>
                                             </label>
                                         </div>
-
                                     </div>
 
                                     <div  className='settings_field'>
@@ -237,26 +274,30 @@ const Home: NextPage = () => {
                                         <div className='settings'>
                                             <label>
                                                 X
-                                                <input type={"text"} id="x"/>
+                                                <input type={"text"} id="x" onChange={handleInputChangeX}/>
                                             </label>
                                             <label>
                                                 Y
-                                                <input type={"text"} id="y"/>
+                                                <input type={"text"} id="y" onChange={handleInputChangeY}/>
                                             </label>
                                         </div>
                                     </div>
                                     <div className="position">
                                         <div className="position_button">
-                                            <LayersUp className="position_button_image" width={24} height={24} alt="" />
+                                            <div id="layers-up-icon" className="header-button-image" />
+                                            {/*<img className="layers-up-image" width={24} height={24} alt="" />*/}
                                         </div>
                                         <div className="position_button">
-                                            <LayersDown className="position_button_image" width={24} height={24} alt="" />
+                                            <div id="layers-down-icon" className="header-button-image" />
+                                            {/*<img className="delete-button-image" src={'delete-icon.svg'} width={24} height={24} alt="" />*/}
                                         </div>
                                         <div className="position_button">
-                                            <ReflectionH className="position_button_image" width={24} height={24} alt="" />
+                                            <div id="reflection-h-icon" className="header-button-image" />
+                                            {/*<img className="delete-button-image" src={'delete-icon.svg'} width={24} height={24} alt="" />*/}
                                         </div>
                                         <div className="position_button">
-                                            <ReflectionY className="position_button_image" width={24} height={24} alt="" />
+                                            <div id="reflection-v-icon" className="header-button-image" />
+                                            {/*<img className="delete-button-image" src={'delete-icon.svg'} width={24} height={24} alt="" />*/}
                                         </div>
                                     </div>
                                     <div className='settings_field'>

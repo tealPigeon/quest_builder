@@ -1009,6 +1009,11 @@
   "resolved" "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   "version" "1.2.1"
 
+"@inlet/react-pixi@^6.7.0":
+  "integrity" "sha512-ql0OM25hNrBl/Yv0roCmPjcoZRxp/MAKY5YzlxtvQQIBYSIToE5H5NF7P7y49y+xoUL9ags+yXAruZgVU8BBWg=="
+  "resolved" "https://registry.npmjs.org/@inlet/react-pixi/-/react-pixi-6.7.0.tgz"
+  "version" "6.7.0"
+
 "@jridgewell/gen-mapping@^0.1.0":
   "integrity" "sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w=="
   "resolved" "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.1.1.tgz"
@@ -1077,6 +1082,193 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
+
+"@pixi/accessibility@6.3.2":
+  "integrity" "sha512-JLDuSGITGEOmR7s0d1Wxj7a3yIp4hP6w2h6ku6iu3clE/bmVtnvhqMX1D1lhjRW/uWUfpVT4U+8CG+LgSsEZ1g=="
+  "resolved" "https://registry.npmjs.org/@pixi/accessibility/-/accessibility-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/app@6.3.2":
+  "integrity" "sha512-V1jnhL92OPiquXtLxUeSZiVDd1mtjRnYpBKA958w29MrIRBx3Y6dgnvsaFZGGWBvSL//WRYV23iZKVL/jRGmmQ=="
+  "resolved" "https://registry.npmjs.org/@pixi/app/-/app-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/compressed-textures@6.3.2":
+  "integrity" "sha512-E/T9WsWcTstnCaDo3GQZUsvX2bE1tZwJ+rUVQ6ad+9MLI6mpUKJFUy5XXlnZw0uiKU5Hipi1ASPQ8/EQ7kKebA=="
+  "resolved" "https://registry.npmjs.org/@pixi/compressed-textures/-/compressed-textures-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/constants@6.3.2":
+  "integrity" "sha512-sUE8QEJNl4vWUybS0YqpVUBWoOyLkr5bSj1+3mpmbWJTMVmLB2voFXo7XpSNCBlLH1SBN5flcgJlUWOCgNyATg=="
+  "resolved" "https://registry.npmjs.org/@pixi/constants/-/constants-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/core@6.3.2":
+  "integrity" "sha512-91Fw0CbFpPtMKo5TG1wdaZGgR99lX87l15F7kgge7FM7ZR4EghLiJHU8whQ19f/UNOd8AG7mHD84lUB1VXXfoA=="
+  "resolved" "https://registry.npmjs.org/@pixi/core/-/core-6.3.2.tgz"
+  "version" "6.3.2"
+  dependencies:
+    "@types/offscreencanvas" "^2019.6.4"
+
+"@pixi/display@6.3.2":
+  "integrity" "sha512-D+WiM0BcyPK91RYxl7TXXVNz/5lOGs8Q6jtCMcWgTHwCXxWPOHFnNZ4KPJZpUQ7me8Tl2u+c9hfB5Oh1+17r/Q=="
+  "resolved" "https://registry.npmjs.org/@pixi/display/-/display-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/extract@6.3.2":
+  "integrity" "sha512-9DT3EG5dE/+HlSsbWLZ28/+YwGzHwgOPIMLB8AHxDsWYKzDg+SDK53IUE2UIeEiV8AFHwaDT2K+/qPFUUcS0Bw=="
+  "resolved" "https://registry.npmjs.org/@pixi/extract/-/extract-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/filter-alpha@6.3.2":
+  "integrity" "sha512-EhFnGuzUnQ94tosInBlMEOtiDtTAm4ZbWtoSYrH3GP7WORCQB5asWTFsOZv/QxwEbloRbxsDOATVIwS5ZcgNOg=="
+  "resolved" "https://registry.npmjs.org/@pixi/filter-alpha/-/filter-alpha-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/filter-blur@6.3.2":
+  "integrity" "sha512-408Z/Rc2LJRg8AaBfzStAph18G0pT3LdLowdTOqPI2s007jgT7wLr9CyWdRe6DdSmPikgnn50R3QG9YeOPWONw=="
+  "resolved" "https://registry.npmjs.org/@pixi/filter-blur/-/filter-blur-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/filter-color-matrix@6.3.2":
+  "integrity" "sha512-PRrQWRRUJ3qDqHhqYNcZ8H3tjXyFbIoUGdTOgB1uCNBHmzJ7Cirhs4lWYBBTvtduboUSGvLMpkv0sgFwodPw4Q=="
+  "resolved" "https://registry.npmjs.org/@pixi/filter-color-matrix/-/filter-color-matrix-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/filter-displacement@6.3.2":
+  "integrity" "sha512-Bda8jY3lVBwlG1GZadYPGXQPO7O+nTt64/KTXQgLtaKB+xj6Me5L7l9IDWtkHEoUTtQK4yCsbkdqKgLKKmNFYg=="
+  "resolved" "https://registry.npmjs.org/@pixi/filter-displacement/-/filter-displacement-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/filter-fxaa@6.3.2":
+  "integrity" "sha512-C5Ga5MJlBFoZUa5oOZEsEEByPzpa+JTRVT7+qQ01g4khU1Mnk/p8JvNm6DYUqw9Y821OR80AmHm2O+r5MkLhcQ=="
+  "resolved" "https://registry.npmjs.org/@pixi/filter-fxaa/-/filter-fxaa-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/filter-noise@6.3.2":
+  "integrity" "sha512-8lZdccDdlKTNktbD+8aeYfceayV6Rzq1P6NLpbvzFZbxH6JoaaNQb2TQgU+Vl/ZcssBB+IJ8MvJZbLuWKC4CmQ=="
+  "resolved" "https://registry.npmjs.org/@pixi/filter-noise/-/filter-noise-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/graphics@6.3.2":
+  "integrity" "sha512-GaykoXJr0pV0e9TB1yOcgvJf9i/fIF/cgT+DnGz82uninWMo31aFJSvhLbZOcEPQRfdHXdFfUkQAAMTICAp7+Q=="
+  "resolved" "https://registry.npmjs.org/@pixi/graphics/-/graphics-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/interaction@6.3.2":
+  "integrity" "sha512-HZyflufAW1B1cQmQBvzv4IxwcHbqQ0zhHiabSVtwPUHW/nCSpw09hL+k4HR/aFyCdRI/99JcvW5QJp1ldA6OBw=="
+  "resolved" "https://registry.npmjs.org/@pixi/interaction/-/interaction-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/loaders@6.3.2":
+  "integrity" "sha512-kkm1pynWTslQsh+h+Tw17MdeRMQ37Ht72xiZetyWbxadRAnzj+x1I9juEKEFK62mw8K/bGBcNPhu7edgmQwkvw=="
+  "resolved" "https://registry.npmjs.org/@pixi/loaders/-/loaders-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/math@6.3.2":
+  "integrity" "sha512-REXrCKQaT2shJ3p2Rpq1ZYV4iUeAOUFKnLN2KteQWtB5HQpB8b+w5xBGI+TcnY0FUhx92fbKPYTTvCftNZF4Jw=="
+  "resolved" "https://registry.npmjs.org/@pixi/math/-/math-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/mesh-extras@6.3.2":
+  "integrity" "sha512-lODKYkoHqynMK8QxE9ttZ1D+3LnHFG13YL4Yf1W9MGgy1N9G0E5DNB8/Z1BApbRxnRPRg8fsoP2bk5Bn9boWyw=="
+  "resolved" "https://registry.npmjs.org/@pixi/mesh-extras/-/mesh-extras-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/mesh@6.3.2":
+  "integrity" "sha512-zhfagRDGkJx+H4a+Im3wQbCeS0Av1FyHzvPeBXXQ7LP/giwTnvJhItlhGMwgFllNEAIB47An0ffFEe5CmTcyKw=="
+  "resolved" "https://registry.npmjs.org/@pixi/mesh/-/mesh-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/mixin-cache-as-bitmap@6.3.2":
+  "integrity" "sha512-Obqnf3Y2JBOtdewkaGb2oa8SDw3+JZCaOB+x0+pBqDivXpwX2eibS4PaYuGVTIa9FdcrGm9SyLOQlL5irEeEqA=="
+  "resolved" "https://registry.npmjs.org/@pixi/mixin-cache-as-bitmap/-/mixin-cache-as-bitmap-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/mixin-get-child-by-name@6.3.2":
+  "integrity" "sha512-R6RJzd1aQ5up5N7uO0boOp99gkSZVEbYKofJNRn1pFdzOmuVCgSqERAv9pQnjp5bBD8JvcKN+PYHPn+k+nTprQ=="
+  "resolved" "https://registry.npmjs.org/@pixi/mixin-get-child-by-name/-/mixin-get-child-by-name-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/mixin-get-global-position@6.3.2":
+  "integrity" "sha512-R7F1sH68fiIvB723doEzE0+k8OfhM5N0H+Ncp8iwLwXxfUDSHVj40nIngMtdK4bLSk29TTczOeXOzXkOAEVXhA=="
+  "resolved" "https://registry.npmjs.org/@pixi/mixin-get-global-position/-/mixin-get-global-position-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/particle-container@6.3.2":
+  "integrity" "sha512-iEHtE2AWQ0NZxv57VzfsBbEEp5WXAt91+l2lNvXf1SbzEm/bqjE56Q5bftx9tl3MJlDmOEfPzzKSwIUcZT+T6w=="
+  "resolved" "https://registry.npmjs.org/@pixi/particle-container/-/particle-container-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/polyfill@6.3.2":
+  "integrity" "sha512-LTKqL/de7TrBoJNh9netkQofwGBIO3NwwQbqBmP6rHXeaHBx9904Pkuf7GJspIFY09TOo5fnctYnJ1F7LfTljg=="
+  "resolved" "https://registry.npmjs.org/@pixi/polyfill/-/polyfill-6.3.2.tgz"
+  "version" "6.3.2"
+  dependencies:
+    "object-assign" "^4.1.1"
+    "promise-polyfill" "^8.2.0"
+
+"@pixi/prepare@6.3.2":
+  "integrity" "sha512-HFV0jUgr5arNBlgctTRqMCgG42vq48J9QLBCZMCRObJQC5325nEXC1toeEekdzqNcGu5bO8/GKeb6+Km2XK2qA=="
+  "resolved" "https://registry.npmjs.org/@pixi/prepare/-/prepare-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/runner@6.3.2":
+  "integrity" "sha512-Sspv4VTiV51GwoIg+WudHZHpT3ad5ukW20OLOR+eDOSLbgQEMfj4cTVRg27TvM/QZ/5LxeN3FqwWV+kiWpqCnw=="
+  "resolved" "https://registry.npmjs.org/@pixi/runner/-/runner-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/settings@6.3.2":
+  "integrity" "sha512-i5cLDUWFnRub3LPa3x7IzkH8MjSwPHyHWzIZKG5t8RiCfbhVfhWGEdKO9AYp8yO/xcf7AqtPK4mikXziL48tXA=="
+  "resolved" "https://registry.npmjs.org/@pixi/settings/-/settings-6.3.2.tgz"
+  "version" "6.3.2"
+  dependencies:
+    "ismobilejs" "^1.1.0"
+
+"@pixi/sprite-animated@6.3.2":
+  "integrity" "sha512-fSY64i5BqbOmtFKhgOWf9iML4gId7l5hcniUT/s95+eIZiyYss+jxeekVH22DrAyCOAIdsLEClvGCHGj8iXTFw=="
+  "resolved" "https://registry.npmjs.org/@pixi/sprite-animated/-/sprite-animated-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/sprite-tiling@6.3.2":
+  "integrity" "sha512-13zsz0xyxMvobEaSXQghSD44+MpSwpbQJYjPVPb7ItqETqQBaZgHpC5uF6vxFR6Hou8Ca8laxRuwgpn3lA095g=="
+  "resolved" "https://registry.npmjs.org/@pixi/sprite-tiling/-/sprite-tiling-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/sprite@6.3.2":
+  "integrity" "sha512-T1KJ8l2f8Otn6Se6h4b2pz2nrUSe59Pnmj2WIzgBisM245h7dGATs05MisMaLV6Lg/3gTBTxsLBmKsbDSQqbNw=="
+  "resolved" "https://registry.npmjs.org/@pixi/sprite/-/sprite-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/spritesheet@6.3.2":
+  "integrity" "sha512-OCi2BUqcBbh2vvbrnLLBOwxFZMQS+rvjW3udBUNbbqUL+NHy74w8N5Ed8pcxXpdfHbApGG6TVJprCGahtmEfJw=="
+  "resolved" "https://registry.npmjs.org/@pixi/spritesheet/-/spritesheet-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/text-bitmap@6.3.2":
+  "integrity" "sha512-jvMeIxoAGDlSn5rHimISI9F6fTk8D+GXG0YQraRT9oXb1Ugy/bFJph3XOTe46s4oZ5R5QeCLQmo6k7TUIvbSkA=="
+  "resolved" "https://registry.npmjs.org/@pixi/text-bitmap/-/text-bitmap-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/text@6.3.2":
+  "integrity" "sha512-YiPnUBmgZ0WzF0+XMm07iRg0jOyPbIjGmXJ+1srU5L9c3cCzvtg5QuYL0lPHS0Z6gyxhj/6ncePhBGO87RIKnA=="
+  "resolved" "https://registry.npmjs.org/@pixi/text/-/text-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/ticker@6.3.2":
+  "integrity" "sha512-Au9IO85zCOOCz50aJALFxJ2C8gbgxvD0dSNm7A5FauanJbxDcctIyrW6I51nNyHyeLIUFEkuD2jE/DmcXsXnpw=="
+  "resolved" "https://registry.npmjs.org/@pixi/ticker/-/ticker-6.3.2.tgz"
+  "version" "6.3.2"
+
+"@pixi/utils@6.3.2":
+  "integrity" "sha512-VpB403kfqwXK9w7Qb6ex0aW0g6pWI/t43F2Z8CA/lAfYcN3O0XoxDucvmkLTQWsMtYn+Yf7YhAcLV5SemKwP0A=="
+  "resolved" "https://registry.npmjs.org/@pixi/utils/-/utils-6.3.2.tgz"
+  "version" "6.3.2"
+  dependencies:
+    "@types/earcut" "^2.1.0"
+    "earcut" "^2.2.2"
+    "eventemitter3" "^3.1.0"
+    "url" "^0.11.0"
 
 "@reduxjs/toolkit@^1.8.1":
   "integrity" "sha512-Q6mzbTpO9nOYRnkwpDlFOAbQnd3g7zj7CtHAZWz5SzE5lcV97Tf8f3SzOO8BoPOMYBFgfZaqTUZqgGu+a0+Fng=="
@@ -1202,6 +1394,11 @@
   "resolved" "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
   "version" "0.2.0"
 
+"@types/earcut@^2.1.0":
+  "integrity" "sha512-w8oigUCDjElRHRRrMvn/spybSMyX8MTkKA5Dv+tS1IE/TgmNZPqUYtvYBXGY8cieSE66gm+szeK+bnbxC2xHTQ=="
+  "resolved" "https://registry.npmjs.org/@types/earcut/-/earcut-2.1.1.tgz"
+  "version" "2.1.1"
+
 "@types/hoist-non-react-statics@^3.3.1":
   "integrity" "sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA=="
   "resolved" "https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz"
@@ -1219,6 +1416,11 @@
   "integrity" "sha512-wANk6fBrUwdpY4isjWrKTufkrXdu1D2YHCot2fD/DfWxF5sMrVSA+KN7ydckvaTCh0HiqX9IVl0L5/ZoXg5M7w=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-17.0.25.tgz"
   "version" "17.0.25"
+
+"@types/offscreencanvas@^2019.6.4":
+  "integrity" "sha512-u8SAgdZ8ROtkTF+mfZGOscl0or6BSj9A4g37e6nvxDc+YB/oDut0wHkK2PBBiC2bNR8TS0CPV+1gAk4fNisr1Q=="
+  "resolved" "https://registry.npmjs.org/@types/offscreencanvas/-/offscreencanvas-2019.6.4.tgz"
+  "version" "2019.6.4"
 
 "@types/parse-json@^4.0.0":
   "integrity" "sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA=="
@@ -1715,6 +1917,11 @@
     "domelementtype" "^2.2.0"
     "domhandler" "^4.2.0"
 
+"earcut@^2.2.2":
+  "integrity" "sha512-iRDI1QeCQIhMCZk48DRDMVgQSSBDmbzzNhnxIo+pwx3swkfjMh6vh0nWLq1NdvGHLKH6wIrAM3vQWeTj6qeoug=="
+  "resolved" "https://registry.npmjs.org/earcut/-/earcut-2.2.3.tgz"
+  "version" "2.2.3"
+
 "electron-to-chromium@^1.4.118":
   "integrity" "sha512-oi3YPmaP87hiHn0c4ePB67tXaF+ldGhxvZnT19tW9zX6/Ej+pLN0Afja5rQ6S+TND7I9EuwQTT8JYn1k7R7rrw=="
   "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.131.tgz"
@@ -2009,6 +2216,11 @@
   "integrity" "sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g=="
   "resolved" "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
   "version" "2.0.3"
+
+"eventemitter3@^3.1.0":
+  "integrity" "sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q=="
+  "resolved" "https://registry.npmjs.org/eventemitter3/-/eventemitter3-3.1.2.tgz"
+  "version" "3.1.2"
 
 "fast-deep-equal@^3.1.1", "fast-deep-equal@^3.1.3":
   "integrity" "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q=="
@@ -2378,6 +2590,11 @@
   "resolved" "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz"
   "version" "2.0.0"
 
+"ismobilejs@^1.1.0":
+  "integrity" "sha512-VaFW53yt8QO61k2WJui0dHf4SlL8lxBofUuUmwBo0ljPk0Drz2TiuDW4jo3wDcv41qy/SxrJ+VAzJ/qYqsmzRw=="
+  "resolved" "https://registry.npmjs.org/ismobilejs/-/ismobilejs-1.1.1.tgz"
+  "version" "1.1.1"
+
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
@@ -2732,6 +2949,47 @@
   "resolved" "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   "version" "2.3.1"
 
+"pixi.js@^6.0.0", "pixi.js@^6.3.2":
+  "integrity" "sha512-XEF59IQRouXCkTSCwNrNvr08/FY3Dai4lwNdrgh5SLeS4Hmn+lNURq2auM+4lYPfsXtQdpZNdJ5iYrFwP41JvA=="
+  "resolved" "https://registry.npmjs.org/pixi.js/-/pixi.js-6.3.2.tgz"
+  "version" "6.3.2"
+  dependencies:
+    "@pixi/accessibility" "6.3.2"
+    "@pixi/app" "6.3.2"
+    "@pixi/compressed-textures" "6.3.2"
+    "@pixi/constants" "6.3.2"
+    "@pixi/core" "6.3.2"
+    "@pixi/display" "6.3.2"
+    "@pixi/extract" "6.3.2"
+    "@pixi/filter-alpha" "6.3.2"
+    "@pixi/filter-blur" "6.3.2"
+    "@pixi/filter-color-matrix" "6.3.2"
+    "@pixi/filter-displacement" "6.3.2"
+    "@pixi/filter-fxaa" "6.3.2"
+    "@pixi/filter-noise" "6.3.2"
+    "@pixi/graphics" "6.3.2"
+    "@pixi/interaction" "6.3.2"
+    "@pixi/loaders" "6.3.2"
+    "@pixi/math" "6.3.2"
+    "@pixi/mesh" "6.3.2"
+    "@pixi/mesh-extras" "6.3.2"
+    "@pixi/mixin-cache-as-bitmap" "6.3.2"
+    "@pixi/mixin-get-child-by-name" "6.3.2"
+    "@pixi/mixin-get-global-position" "6.3.2"
+    "@pixi/particle-container" "6.3.2"
+    "@pixi/polyfill" "6.3.2"
+    "@pixi/prepare" "6.3.2"
+    "@pixi/runner" "6.3.2"
+    "@pixi/settings" "6.3.2"
+    "@pixi/sprite" "6.3.2"
+    "@pixi/sprite-animated" "6.3.2"
+    "@pixi/sprite-tiling" "6.3.2"
+    "@pixi/spritesheet" "6.3.2"
+    "@pixi/text" "6.3.2"
+    "@pixi/text-bitmap" "6.3.2"
+    "@pixi/ticker" "6.3.2"
+    "@pixi/utils" "6.3.2"
+
 "postcss@8.4.5":
   "integrity" "sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.5.tgz"
@@ -2746,7 +3004,12 @@
   "resolved" "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   "version" "1.2.1"
 
-"prop-types@^15.8.1":
+"promise-polyfill@^8.2.0":
+  "integrity" "sha512-Og0+jCRQetV84U8wVjMNccfGCnMQ9mGs9Hv78QFe+pSDD3gWTpz0y+1QCuxy5d/vBFuZ3iwP2eycAkvqIMPmWg=="
+  "resolved" "https://registry.npmjs.org/promise-polyfill/-/promise-polyfill-8.2.3.tgz"
+  "version" "8.2.3"
+
+"prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -2760,12 +3023,22 @@
   "resolved" "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz"
   "version" "2.1.1"
 
+"punycode@1.3.2":
+  "integrity" "sha1-llOgNvt8HuQjQvIyXM7v6jkmxI0="
+  "resolved" "https://registry.npmjs.org/punycode/-/punycode-1.3.2.tgz"
+  "version" "1.3.2"
+
+"querystring@0.2.0":
+  "integrity" "sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA="
+  "resolved" "https://registry.npmjs.org/querystring/-/querystring-0.2.0.tgz"
+  "version" "0.2.0"
+
 "queue-microtask@^1.2.2":
   "integrity" "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
-"react-dom@^16.8 || ^17.0 || ^18.0", "react-dom@^17.0.2", "react-dom@^17.0.2 || ^18.0.0-0":
+"react-dom@^16.8 || ^17.0 || ^18.0", "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@^17.0.2 || ^18.0.0-0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -2796,7 +3069,7 @@
     "react-is" "^18.0.0"
     "use-sync-external-store" "^1.0.0"
 
-"react@*", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.2", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@17.0.2":
+"react@*", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.1", "react@^17.0.2", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -3179,6 +3452,14 @@
   "version" "4.4.1"
   dependencies:
     "punycode" "^2.1.0"
+
+"url@^0.11.0":
+  "integrity" "sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE="
+  "resolved" "https://registry.npmjs.org/url/-/url-0.11.0.tgz"
+  "version" "0.11.0"
+  dependencies:
+    "punycode" "1.3.2"
+    "querystring" "0.2.0"
 
 "use-sync-external-store@^1.0.0":
   "integrity" "sha512-SEnieB2FPKEVne66NpXPd1Np4R1lTNKfjuy3XdIoPQKYBAFdzbzSZlSn1KJZUiihQLQC5Znot4SBz1EOTBwQAQ=="
