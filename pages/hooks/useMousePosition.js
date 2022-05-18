@@ -1,10 +1,10 @@
 import { useState, useMemo, useEffect } from "react";
 
 const useMousePosition = () => {
-  const [mouse, setMouse] = useState({x: 0, y: 0});
+  const [mouse, setMouse] = useState({left: 0, top: 0});
 
   const onMouse = ({clientX, clientY}) => {
-    setMouse({x: clientX, y: clientY});
+    setMouse({left: clientX, top: clientY});
   };
 
   useEffect(() => {

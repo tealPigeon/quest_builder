@@ -1,0 +1,63 @@
+.container {
+    max-width: 600px;
+    margin: 6rem auto 4rem;
+    padding: 0 10px;
+}
+
+.heading {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    list-style: none;
+}
+
+.active_button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8px;
+    cursor: pointer;
+    color: #006666;
+    background: #E6F0F0;
+    border-bottom: 2px solid #E0E0E0;
+}
+
+
+.button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8px;
+    cursor: pointer;
+
+    border-bottom: 2px solid #E0E0E0;
+}
+
+.control {
+    font-size: 20px;
+}
+
+.answer {
+    background-color: #f7f7f7;
+    padding: 20px;
+}

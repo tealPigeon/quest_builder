@@ -1,7 +1,7 @@
 import { Stage, Container, Sprite, useTick } from "@inlet/react-pixi";
 import { settings, SCALE_MODES } from "pixi.js";
 import PIXI from "pixi.js";
-import {incrementByAmountX, incrementByAmountY,setCurrentObjectId} from "../store/reducers";
+import {changeX, changeY,setCurrentObjectId} from "../store/reducers";
 import {useDispatch, useSelector} from "react-redux";
 
 
@@ -11,13 +11,12 @@ interface Draggable extends PIXI.DisplayObject {
 }
 
 
-function RotatingBunny({props})
+function PixiObject({props})
 {
     const {objectList}= useSelector((state) => state.counter);
-    console.log({props})
+    // console.log({props})
     const dispatch = useDispatch();
     const scale = { x: props.width, y: props.height};
-    // console.log(props.x);
 
     const position= { x: Number(props.left), y: Number(props.top) };
 
@@ -26,7 +25,6 @@ function RotatingBunny({props})
         sprite.alpha = 0.5;
         sprite.data = event.data;
         sprite.dragging = true;
-
         dispatch(setCurrentObjectId(props.id));
     };
 
@@ -40,10 +38,10 @@ function RotatingBunny({props})
     const onDragMove = (event: PIXI.InteractionEvent) => {
         const sprite = event.currentTarget as Draggable;
         if (sprite.dragging) {
+            // console.log(sprite.data!.global);
             const newPosition = sprite.data!.getLocalPosition(sprite.parent);
-            dispatch(incrementByAmountX(Number(newPosition.x)));
-            dispatch(incrementByAmountY(Number(newPosition.y)));
-            console.log("move");
+            dispatch(changeX(Number(newPosition.x)));
+            dispatch(changeY(Number(newPosition.y)));
         }
     };
 
@@ -68,4 +66,4 @@ function RotatingBunny({props})
     );
 };
 
-export default RotatingBunny;
+export default PixiObject;
