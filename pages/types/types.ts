@@ -3,6 +3,7 @@ export type ObjectInMenu = {
         name:string,
         width: number,
         height: number,
+        id: number,
 };
 
 export type MenuItem ={

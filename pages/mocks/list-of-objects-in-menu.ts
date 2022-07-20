@@ -2,58 +2,91 @@ import {ObjectsInMenu} from '../types/types';
 export const listOfObject: ObjectsInMenu = [
     {
         id: 0,
-        title: "Покемоны",
+        title: "Ключи",
         content: [{
-            url:'https://www.pngall.com/wp-content/uploads/5/Pikachu-PNG-Image-File.png"',
-            width:300,
+            id:0,
+            url:'../key.png',
+            width:200,
             height:200,
-            name:"Pikachu"
-        },
-            {
-                url:'https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png',
-                width:200,
-                height:200,
-                name:"Beedrill"
-            },{
-                url:'https://upload.wikimedia.org/wikipedia/ru/d/d6/052Meowth.png',
-                width:200,
-                height:200,
-                name:"Meowth"
-            }
+            name:"Ключ"
+        }
         ],
     },
     {
         id: 1,
         title: "Двери",
-        content: [
-//             {
-//             url:'https://www.pngall.com/wp-content/uploads/5/Pikachu-PNG-Image-File.png"',
-//             width:300,
-//             height:200,
-//             name:"Pikachu"
-//         },
-//             {
-//                 url:'https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png',
-//                 width:200,
-//                 height:200,
-//                 name:"Beedrill"
-//             },{
-//     url:'https://upload.wikimedia.org/wikipedia/ru/d/d6/052Meowth.png',
-//         width:200,
-//         height:200,
-//         name:"Meowth"
-// }
-],
+        content: [{
+            id:0,
+            url:'../doors/Door_1.png',
+            width:200,
+            height:200,
+            name:"Дверь"
+        },
+            {
+                id:1,
+                url:'../doors/DoorClose.png',
+                width:200,
+                height:200,
+                name:"Дверь"
+            },{
+                id:2,
+                url:'../doors/DoorClose2.png',
+                width:200,
+                height:200,
+                name:"Дверь"
+            },
+            {
+                id:3,
+                url:'../doors/DoorOpen.png',
+                width:200,
+                height:200,
+                name:"Дверь"
+            }
+        ],
     },
     {
         id: 2,
         title: "Диваны и кресла",
-        content:[]
+        content:[
+    {
+        id:0,
+        url:'../armchair/Armchair.png',
+        width:200,
+        height:200,
+        name:"Кресло"
+    },{
+        id:1,
+        url:'../armchair/kreslo.png',
+        width:200,
+        height:200,
+        name:"Кресло"
+    },]
     },
     {
         id: 3,
         title: "Столы и стулья",
-        content:[]
+        content:[
+            {
+                id:0,
+                url:'../chairs/Chair.png',
+                width:200,
+                height:200,
+                name:"Стул"
+            },{
+                id:1,
+                url:'../chairs/Chair2.png',
+                width:200,
+                height:200,
+                name:"Стол"
+            },
+            {
+                id:2,
+                url:'../chairs/Chair3.png',
+                width:200,
+                height:200,
+                name:"Стул"
+            }
+        ],
     },
     {
         id: 4,
