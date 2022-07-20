@@ -1,6 +1,6 @@
 import { createAction, createSlice } from "@reduxjs/toolkit";
-import actions from "../components/actions";
-import del from "../../public/delete.svg"
+// import actions from "../components/actions";
+// import del from "../../public/delete.svg"
 
 const setHandMode = createAction('setHandMode')
 

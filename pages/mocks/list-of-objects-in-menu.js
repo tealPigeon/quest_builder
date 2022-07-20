@@ -1,5 +1,5 @@
-import {ObjectsInMenu} from '../types/types';
-export const listOfObject: ObjectsInMenu = [
+// import {ObjectsInMenu} from '../types/types';
+export const listOfObject = [
     {
         id: 0,
         title: "Ключи",

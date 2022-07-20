@@ -1,5 +1,5 @@
-import {BackgroundImages} from '../types/types';
-export const listOfBackgroundImages: BackgroundImages = [
+// import {BackgroundImages} from '../types/types';
+export const listOfBackgroundImages = [
     {
         id: 1,
         image: "../backgrounds/Room.svg",
