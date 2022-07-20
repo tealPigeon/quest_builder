@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Stage, Container, Sprite, useTick, Text } from "@inlet/react-pixi";
 import PIXI from "pixi.js";
-import store from "../store"
+import store from "../../pages/store"
 import { Provider } from 'react-redux';
 import { useDispatch, useSelector } from "react-redux";
 import PixiObject from "./pixi-object"
-import {changeX, changeY, setCurrentObjectId, addObject} from "../store/reducers";
-import {ObjectInMenu} from "../types/types";
+import {changeX, changeY, setCurrentObjectId, addObject} from "../../pages/store/reducers";
+import {ObjectInMenu} from "../../public/types/types";
 // import del from "../delete.png";
 
 

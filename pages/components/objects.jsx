@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import styles from '../../styles/object-menu.module.css'
 import PixiObjects from "./pixi-objects";
-import {ObjectInMenu} from "../types/types";
+import {ObjectInMenu} from "../../public/types/types";
 
 function Objects({ title, content }) {
     const [isActive, setIsActive] = useState(false);
