@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import React, {useEffect, useState} from 'react'
 import { useSelector} from "react-redux";
 import del from '../public/delete.png'
@@ -10,7 +9,7 @@ import Background from "./components/background";
 import Image from "next/image";
 import {Sprite,Stage} from "@inlet/react-pixi";
 import * as PIXI from "pixi.js"
-const Home: NextPage = () => {
+const Home = () => {
     const {backgroundImage} = useSelector((state) =>  state.counter.present);
 
     function useWindowSize() {

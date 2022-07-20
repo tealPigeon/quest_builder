@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/store/counter.ts", "pages/components/background.jsx", "pages/components/objects.jsx", "pages/components/pixi-objects.jsx", "pages/components/workspace.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/store/counter.ts", "pages/components/background.jsx", "pages/components/objects.jsx", "pages/components/pixi-objects.jsx", "pages/components/workspace.jsx", "pages/index.jsx", "pages/_app.jsx"],
   "exclude": ["node_modules"]
 }
