@@ -5,27 +5,27 @@ import { useDispatch, useSelector } from "react-redux";
 // import PixiObject from "../PixiObject"
 import {changeBackgroundX, changeBackgroundY} from "../store/reducers"
 
-interface Draggable extends PIXI.DisplayObject {
-    data: PIXI.InteractionData | null;
-    dragging: boolean;
-}
-// @ts-ignore
+// interface Draggable extends PIXI.DisplayObject {
+//     data: PIXI.InteractionData | null;
+//     dragging: boolean;
+// }
+
 function Background ()
 {
     const {background, mode}= useSelector((state) => state.counter.present);
     const [move, setMove] = useState([background.left, background.top]);
     const dispatch = useDispatch();
     const [isMoving, setIsMoving] = useState(false);
-    const onDragStart = (event: PIXI.InteractionEvent) => {
-        const sprite = event.currentTarget as Draggable;
+    const onDragStart = (event) => {
+        const sprite = event.currentTarget;
         sprite.alpha = 0.5;
         sprite.data = event.data;
         sprite.dragging = true;
         setIsMoving(true);
     };
 
-    const onDragEnd = (event: PIXI.InteractionEvent) => {
-        const sprite = event.currentTarget as Draggable;
+    const onDragEnd = (event) => {
+        const sprite = event.currentTarget;
         sprite.alpha = 1;
         sprite.dragging = false;
         sprite.data = null;
@@ -35,10 +35,10 @@ function Background ()
         dispatch(changeBackgroundY(move[1]));
     };
 
-    const onDragMove = (event: PIXI.InteractionEvent) => {
-        const sprite = event.currentTarget as Draggable;
+    const onDragMove = (event) => {
+        const sprite = event.currentTarget;
         if (sprite.dragging) {
-            const newPosition = sprite.data!.getLocalPosition(sprite.parent);
+            const newPosition = sprite.data.getLocalPosition(sprite.parent);
             // dispatch(changeBackgroundX(Number(newPosition.x)));
             // dispatch(changeBackgroundX(Number(newPosition.y)));
             setMove([Number(newPosition.x), Number(newPosition.y)])

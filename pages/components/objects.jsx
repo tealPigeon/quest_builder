@@ -3,16 +3,8 @@ import React, {useState} from 'react';
 import styles from '../../styles/object-menu.module.css'
 import PixiObjects from "./pixi-objects";
 import {ObjectInMenu} from "../types/types";
-// import dynamic from "next/dynamic";
 
-// const Workspace = dynamic(() => import("../components/Workspace"), { ssr: false });
-
-type CardProps = {
-    title: String;
-    content: ObjectInMenu[];
-}
-
-function Objects({ title, content }:CardProps) : JSX.Element {
+function Objects({ title, content }) {
     const [isActive, setIsActive] = useState(false);
     // console.log(content)
     return (

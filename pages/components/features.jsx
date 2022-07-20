@@ -117,11 +117,9 @@ function Features()
         </div>
         <div className="position_button" onClick={()=>handleInputhorizontalMirroring()}>
             <div id="reflection-h-icon" className="header-button-image" />
-            {/*<img className="delete-button-image" src={'delete-icon.svg'} width={24} height={24} alt="" />*/}
         </div>
         <div className="position_button" onClick={()=>handleInputverticalMirroring()}>
             <div id="reflection-v-icon" className="header-button-image" />
-            {/*<img className="delete-button-image" src={'delete-icon.svg'} width={24} height={24} alt="" />*/}
         </div>
     </div>
     <div className='settings_field'>
