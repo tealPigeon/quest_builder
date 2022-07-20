@@ -7,24 +7,23 @@ import { useDispatch, useSelector } from "react-redux";
 import PixiObject from "./pixi-object"
 import {changeX, changeY, setCurrentObjectId, addObject} from "../store/reducers";
 import {ObjectInMenu} from "../types/types";
-import del from "../delete.png";
+// import del from "../delete.png";
 
 
-interface Draggable extends PIXI.DisplayObject {
-    data: PIXI.InteractionData | null;
-    dragging: boolean;
-}
+// interface Draggable extends PIXI.DisplayObject {
+//     data: PIXI.InteractionData | null;
+//     dragging: boolean;
+// }
 
 
-// @ts-ignore
-const PixiObjects = ({props}:ObjectInMenu) => {
+const PixiObjects = ({props}) => {
     // const {objectList, backgroundImage} = useSelector((state) => state.counter);
     // console.log(objectList)
     const [position,setPosition]= useState({ x: 100, y: 100 });
     const lastPosition = { x: 0, y: 0 };
     const dispatch = useDispatch();
-    const onDragStart = (event: PIXI.InteractionEvent) => {
-        const sprite = event.currentTarget as Draggable;
+    const onDragStart = (event) => {
+        const sprite = event.currentTarget;
         sprite.alpha = 0.5;
         sprite.data = event.data;
         sprite.dragging = true;
@@ -32,8 +31,8 @@ const PixiObjects = ({props}:ObjectInMenu) => {
         // dispatch(setCurrentObjectId(props.id));
     };
 // console.log(props)
-    const onDragEnd = (event: PIXI.InteractionEvent) => {
-        const sprite = event.currentTarget as Draggable;
+    const onDragEnd = (event) => {
+        const sprite = event.currentTarget;
         // const newPosition = sprite.data!.getLocalPosition(sprite.parent);
         sprite.alpha = 1;
         sprite.dragging = false;
@@ -54,10 +53,10 @@ const PixiObjects = ({props}:ObjectInMenu) => {
         sprite.data = null;
     };
 
-    const onDragMove = (event: PIXI.InteractionEvent) => {
-        const sprite = event.currentTarget as Draggable;
+    const onDragMove = (event) => {
+        const sprite = event.currentTarget;
         if (sprite.dragging) {
-            const newPosition = sprite.data!.getLocalPosition(sprite.parent);
+            const newPosition = sprite.data.getLocalPosition(sprite.parent);
             setPosition({x:Number(newPosition.x), y:Number(newPosition.y)})
             // dispatch(changeX(Number(newPosition.x)));
             // dispatch(changeY(Number(newPosition.y)));
